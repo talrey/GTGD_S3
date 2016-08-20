@@ -4,8 +4,8 @@ using System.Collections;
 namespace Talrey {
 	public class Item_Throw : MonoBehaviour {
 		
-		private Item_Master im;
-		private Transform myTransform;
+		//private Item_Master im;
+		//private Transform myTransform;
 		private Rigidbody myRB;
 		private Vector3 throwDirection;
 		
@@ -18,12 +18,9 @@ namespace Talrey {
 		}
 		
 		void SetInitialReferences () {
-			im = GetComponent<Item_Master>();
-			myTransform = transform;
-			myRB = GetComponent<Rigidbody>();
-			if ( !(myTransform is Transform) || !(im is Item_Master) || !(myRB is Rigidbody) ) {
-				Debug.Log("init failed");
-			}
+			//im = GetComponent<Item_Master>();
+			//myTransform = transform;
+			//myRB = GetComponent<Rigidbody>();
 		}
 		
 		void Update () {
@@ -34,11 +31,8 @@ namespace Talrey {
 			if (throwButtonName != null) {
 				if (Input.GetButtonDown(throwButtonName)) {
 					Debug.Log("trying to throw");
-					if (Time.timeScale > 0 && canBeThrown) {
-						if (!(myTransform is Transform)) Debug.Log("transform not ok");
-						if (transform.root.CompareTag(GM_References._playerTag)) {
-							CarryOutThrowActions();
-						}
+					if (Time.timeScale > 0 && canBeThrown && transform.root.CompareTag(GM_References._playerTag)) {
+						CarryOutThrowActions();
 					}
 				}
 			} else Debug.Log("throw key is null");
@@ -47,13 +41,15 @@ namespace Talrey {
 		void CarryOutThrowActions () {
 			throwDirection = transform.parent.forward;
 			transform.parent = null;
-			if (! (im is Item_Master) ) Debug.Log("that's why");
-			im.CallEventObjectThrow();
+			//im.CallEventObjectThrow();
+			GetComponent<Item_Master>().CallEventObjectThrow();
 			HurlItem();
 			Debug.Log("Item thrown");
 		}
 		
 		void HurlItem () {
+			myRB = GetComponent<Rigidbody>();
+			myRB.isKinematic = false;
 			myRB.AddForce(throwDirection*throwForce, ForceMode.Impulse);
 		}
 	}

@@ -94,6 +94,7 @@ namespace Talrey {
 			yield return new WaitForSeconds(timeToPlaceInHands);
 			currentlyHeldItem = item;
 			currentlyHeldItem.gameObject.SetActive(true);
+			currentlyHeldItem.GetComponent<Rigidbody>().isKinematic = true;
 		}
 	}
 }
