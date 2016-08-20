@@ -15,11 +15,9 @@ namespace Talrey {
 		
 		void OnEnable () {
 			SetInitialReferences();
-			EventObjectPickup += TestFunction;
 		}
 		
 		void OnDisable () {
-			EventObjectPickup -= TestFunction;
 		}
 
 		void SetInitialReferences () {
@@ -50,7 +48,7 @@ namespace Talrey {
 					}
 				}
 				pl.CallEventInventoryChanged();
-				Debug.Log("picking up item");
+				//Debug.Log("picking up item");
 			} else {
 				Debug.Log("null object event");
 			}
@@ -60,10 +58,6 @@ namespace Talrey {
 			if (EventPickupAction != null) {
 				EventPickupAction(item);
 			}
-		}
-		
-		public void TestFunction () {
-			Debug.Log("Placeholder function, signaled by EventItemPickup.");
 		}
 	}
 }

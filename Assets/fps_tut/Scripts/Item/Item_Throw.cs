@@ -30,7 +30,7 @@ namespace Talrey {
 		void CheckForThrowInput () {
 			if (throwButtonName != null) {
 				if (Input.GetButtonDown(throwButtonName)) {
-					Debug.Log("trying to throw");
+					//Debug.Log("trying to throw");
 					if (Time.timeScale > 0 && canBeThrown && transform.root.CompareTag(GM_References._playerTag)) {
 						CarryOutThrowActions();
 					}
@@ -44,12 +44,12 @@ namespace Talrey {
 			//im.CallEventObjectThrow();
 			GetComponent<Item_Master>().CallEventObjectThrow();
 			HurlItem();
-			Debug.Log("Item thrown");
+			//Debug.Log("Item thrown");
 		}
 		
 		void HurlItem () {
 			myRB = GetComponent<Rigidbody>();
-			myRB.isKinematic = false;
+			//myRB.isKinematic = false;
 			myRB.AddForce(throwDirection*throwForce, ForceMode.Impulse);
 		}
 	}
