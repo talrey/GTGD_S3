@@ -93,9 +93,21 @@
      <Compile Include="Assets\fps_tut\Scripts\Gun\Gun_Shoot.cs" />
      <Compile Include="Assets\fps_tut\Scripts\Gun\Gun_Sounds.cs" />
      <Compile Include="Assets\fps_tut\Scripts\Gun\Gun_StandardInput.cs" />
+     <Compile Include="Assets\fps_tut\Scripts\Item\Destructable\Destructable_ActivateShards.cs" />
+     <Compile Include="Assets\fps_tut\Scripts\Item\Destructable\Destructable_CollisionDetection.cs" />
+     <Compile Include="Assets\fps_tut\Scripts\Item\Destructable\Destructable_Degenerate.cs" />
+     <Compile Include="Assets\fps_tut\Scripts\Item\Destructable\Destructable_Explode.cs" />
+     <Compile Include="Assets\fps_tut\Scripts\Item\Destructable\Destructable_Health.cs" />
+     <Compile Include="Assets\fps_tut\Scripts\Item\Destructable\Destructable_LowHealthEffect.cs" />
+     <Compile Include="Assets\fps_tut\Scripts\Item\Destructable\Destructable_Master.cs" />
+     <Compile Include="Assets\fps_tut\Scripts\Item\Destructable\Destructable_ParticleSpawn.cs" />
+     <Compile Include="Assets\fps_tut\Scripts\Item\Destructable\Destructable_PlayerInventoryUpdate.cs" />
+     <Compile Include="Assets\fps_tut\Scripts\Item\Destructable\Destructable_Sound.cs" />
+     <Compile Include="Assets\fps_tut\Scripts\Item\Destructable\Destructable_TakeDamage.cs" />
      <Compile Include="Assets\fps_tut\Scripts\Item\Item_Ammo.cs" />
      <Compile Include="Assets\fps_tut\Scripts\Item\Item_Animator.cs" />
      <Compile Include="Assets\fps_tut\Scripts\Item\Item_Colliders.cs" />
+     <Compile Include="Assets\fps_tut\Scripts\Item\Item_Drop.cs" />
      <Compile Include="Assets\fps_tut\Scripts\Item\Item_Master.cs" />
      <Compile Include="Assets\fps_tut\Scripts\Item\Item_Name.cs" />
      <Compile Include="Assets\fps_tut\Scripts\Item\Item_Pickup.cs" />
@@ -106,6 +118,7 @@
      <Compile Include="Assets\fps_tut\Scripts\Item\Item_Sounds.cs" />
      <Compile Include="Assets\fps_tut\Scripts\Item\Item_Tag.cs" />
      <Compile Include="Assets\fps_tut\Scripts\Item\Item_Throw.cs" />
+     <Compile Include="Assets\fps_tut\Scripts\Item\Item_Transparency.cs" />
      <Compile Include="Assets\fps_tut\Scripts\Item\Item_UI.cs" />
      <Compile Include="Assets\fps_tut\Scripts\MainMenu.cs" />
      <Compile Include="Assets\fps_tut\Scripts\Player\Player_AmmoBox.cs" />
@@ -114,6 +127,7 @@
      <Compile Include="Assets\fps_tut\Scripts\Player\Player_Health.cs" />
      <Compile Include="Assets\fps_tut\Scripts\Player\Player_Inventory.cs" />
      <Compile Include="Assets\fps_tut\Scripts\Player\Player_Master.cs" />
+     <Compile Include="Assets\fps_tut\Scripts\Player\Player_TakeDamage.cs" />
      <Compile Include="Assets\fps_tut\Scripts\Shoot.cs" />
      <Compile Include="Assets\fps_tut\Scripts\Welcome.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
